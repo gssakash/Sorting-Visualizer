@@ -1,0 +1,30 @@
+.array-container {
+	top: 75px;
+	position: absolute;
+	left: 20%;
+}
+
+.array-bar {
+	width: 2px;
+	display: inline-block;
+	margin: 0 1px;
+}
+
+.btn-container {
+	padding-bottom: 75px;
+	order: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.btn {
+	cursor: pointer;
+	background-color: black;
+	outline: none;
+	border: 1px solid black;
+	color: white;
+	padding: 25px;
+	padding-left: 35px;
+	padding-right: 35px;
+}
