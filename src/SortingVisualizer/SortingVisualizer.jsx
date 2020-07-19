@@ -126,32 +126,37 @@ const SECONDARY_COLOR = 'yellow';
   }
   }
 
-  function insertionSort(){ //2 and 6 seems viable  1 and 3 orrr 2 and 5 (DIFFERENCE NEEDED)
-    const [animations] = getInsertionSortAnimations(array);
-    for (let i = 0; i < animations.length; i++) {
-      const isColorChange =
-        animations[i][0] === "comparision1" ||
-        animations[i][0] === "comparision2";
-      const arrayBars = document.getElementsByClassName("array-bar");
-      if (isColorChange === true) {
-        const color =
-          animations[i][0] === "comparision1" ? SECONDARY_COLOR : PRIMARY_COLOR;
-        const [temp, barOneIndex, barTwoIndex] = animations[i];
-        const barOneStyle = arrayBars[barOneIndex].style;
-        const barTwoStyle = arrayBars[barTwoIndex].style;
-        setTimeout(() => {
-          barOneStyle.backgroundColor = color;
-          barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
-      } else {
-        const [temp, barIndex, newHeight] = animations[i];
-        const barStyle = arrayBars[barIndex].style;
-        setTimeout(() => {
-          barStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS/6);
-      }
+  /* !!!! WORKING !!!! */
+
+ 
+function insertionSort(){ //2 and 6 seems viable  1 and 3 orrr 2 and 5 (DIFFERENCE NEEDED)
+  const [animations] = getInsertionSortAnimations(array);
+  for (let i = 0; i < animations.length; i++) {
+    const isColorChange =
+      animations[i][0] === "comparison1" ||
+      animations[i][0] === "comparison2";
+    const arrayBars = document.getElementsByClassName("array-bar");
+    if (isColorChange === true) {
+      const color =
+        animations[i][0] === "comparison1" ? SECONDARY_COLOR : PRIMARY_COLOR;
+      const [temp, barOneIndex, barTwoIndex] = animations[i];
+      const barOneStyle = arrayBars[barOneIndex].style;
+      const barTwoStyle = arrayBars[barTwoIndex].style;
+      setTimeout(() => {
+        barOneStyle.backgroundColor = color;
+        barTwoStyle.backgroundColor = color;
+      }, i * ANIMATION_SPEED_MS);
+    } else {
+      const [temp, barIndex, newHeight] = animations[i];
+      const barStyle = arrayBars[barIndex].style;
+      setTimeout(() => {
+        barStyle.height = `${newHeight}px`;
+      }, i * ANIMATION_SPEED_MS/6);
     }
   }
+}
+
+
 
   
 
@@ -159,12 +164,12 @@ const SECONDARY_COLOR = 'yellow';
     const animations = getSelectionSortAnimations(array);
     for (let i = 0; i < animations.length; i++) {
       const isColorChange =
-        animations[i][0] === "comparision1" ||
-        animations[i][0] === "comparision2";
+        animations[i][0] === "comparison1" ||
+        animations[i][0] === "comparison2";
       const arrayBars = document.getElementsByClassName("array-bar");
       if (isColorChange === true) {
         const color =
-          animations[i][0] === "comparision1" ? SECONDARY_COLOR : PRIMARY_COLOR;
+          animations[i][0] === "comparison1" ? SECONDARY_COLOR : PRIMARY_COLOR;
         const [temp, barOneIndex, barTwoIndex] = animations[i];
         const barOneStyle = arrayBars[barOneIndex].style;
         const barTwoStyle = arrayBars[barTwoIndex].style;

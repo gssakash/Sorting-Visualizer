@@ -8,8 +8,8 @@ export function getSelectionSortAnimations(array) {
     for (let i = startIndex; i < auxillaryArray.length - 1; i++) {
       let minIndex = i; //Finding minimum element in unsorted array
       for (let j = i + 1; j < auxillaryArray.length; j++) {
-        animations.push(["comparision1", j, minIndex]);
-        animations.push(["comparision2", j, minIndex]);
+        animations.push(["comparison1", j, minIndex]);
+        animations.push(["comparison2", j, minIndex]);
         if (auxillaryArray[j] < auxillaryArray[minIndex]) {
           minIndex = j;
         }
