@@ -23,8 +23,8 @@ export function getbubbleSortAnimations(array) {
     }
   }
   
-  function swap(auxiliaryArray, firstIndex, secondIndex) {
-    let temp = auxiliaryArray[firstIndex];
-    auxiliaryArray[firstIndex] = auxiliaryArray[secondIndex];
-    auxiliaryArray[secondIndex] = temp;
+  function swap(mainArray, firstIndex, secondIndex) {
+    let temp = mainArray[firstIndex];
+    mainArray[firstIndex] = mainArray[secondIndex];
+    mainArray[secondIndex] = temp;
   }
