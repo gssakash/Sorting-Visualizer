@@ -154,30 +154,6 @@ const SECONDARY_COLOR = 'yellow';
   }
 
   
-  // function insertionSort(){ //2 and 6 seems viable  1 and 3 orrr 2 and 5 (DIFFERENCE NEEDED)
-  //   const [animations] = getInsertionSortAnimations(array);
-  //   for (let i = 0; i < animations.length; i++) {
-  //     const isColorChange = i % 4 !== 3;
-
-  //     const arrayBars = document.getElementsByClassName("array-bar");
-  //     if (isColorChange === true) {
-  //       const color = i%2 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
-  //       const [temp, barOneIndex, barTwoIndex] = animations[i];
-  //       const barOneStyle = arrayBars[barOneIndex].style;
-  //       const barTwoStyle = arrayBars[barTwoIndex].style;
-  //       setTimeout(() => {
-  //         barOneStyle.backgroundColor = color;
-  //         barTwoStyle.backgroundColor = color;
-  //       }, i * ANIMATION_SPEED_MS);
-  //     } else {
-  //       const [temp, barIndex, newHeight] = animations[i];
-  //       const barStyle = arrayBars[barIndex].style;
-  //       setTimeout(() => {
-  //         barStyle.height = `${newHeight}px`;
-  //       }, i * ANIMATION_SPEED_MS/6);
-  //     }
-  //   }
-  // }
 
   function selectionSort(){  //DIFFERENCE NEEDED
     const animations = getSelectionSortAnimations(array);
