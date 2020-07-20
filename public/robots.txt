@@ -1,2 +1,24 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
+
+Challenges I Faced : 
+
+
+--Delaying of the Time for animations : 
+
+I faced an issue with making the animations stick for each comparison and swap that takes place 
+and ultimately i ended up fixing it by multiplying the time delay with the index of the array element so that the timeout would be applied for every index.
+Note : This happened because for loops are synchronous and they have absolutely no time delay so for the time delay i did the above.
+
+--Keeping track of the color of the elements while comparing them : 
+
+I had an issue with changing the color of the element while they're being compared as i had to revert them back to their original color after the comparison is done
+So, i decided to first push the color aka yellow which is to be shown when the elements are being compared and then make them their original color after the comparison finishes
+
+--Not being able to keep track of the indices when the values are being compared. 
+
+I faced an issue with implementing this visualizer for selection sort and insertion sort as I was not able to detect the indices 
+where i was supposed to perform the color change (to yellow) which is used to show that the values are being compared against each other 
+after which the values are changed back to the original color
+so, i decided to use the strings (comparison1, comparison2) instead of keeping track of the indices where the values are being compared with each other. 
+And, i've also added other strings which can legit have any value to avoid further errors.

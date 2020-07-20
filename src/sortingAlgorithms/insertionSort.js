@@ -1,10 +1,12 @@
+
 export function getInsertionSortAnimations(array) {
   let animations = [];
+  if (array.length <= 1) return array;
   let auxillaryArray = array.slice();
   insertionSort(auxillaryArray, animations);
-  array = auxillaryArray;
-  return [animations, array];
+  return animations
 }
+
 
 function insertionSort(auxillaryArray, animations) { 
   const N = auxillaryArray.length;
