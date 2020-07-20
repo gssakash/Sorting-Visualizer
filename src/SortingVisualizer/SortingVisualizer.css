@@ -1,9 +1,3 @@
-.array-container {
-	top: 75px;
-	position: absolute;
-	left: 20%;
-}
-
 .array-bar {
 	width: 2px;
 	display: inline-block;
@@ -11,18 +5,37 @@
 }
 
 .btn-container {
-	padding-bottom: 75px;
-	order: 1;
+	margin-bottom: 100px;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	background-color: black;
 }
 
+.generate-btn {
+	cursor: pointer;
+	background-color: inherit;
+	outline: none;
+	border: none;
+	color: white;
+	padding: 25px;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-right: 300px;
+}
+.generate-btn:hover {
+	color: turquoise;
+}
+
+.btn:hover {
+	border-bottom: 3px solid turquoise;
+}
 .btn {
 	cursor: pointer;
-	background-color: black;
+	background-color: inherit;
 	outline: none;
-	border: 1px solid black;
+	border: none;
 	color: white;
 	padding: 25px;
 	padding-left: 35px;

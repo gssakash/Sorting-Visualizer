@@ -22,6 +22,7 @@ function SortingVisualizer() {
 
 	const [ array, setArray ] = useState([]);
 
+  // function responsivle for randomization
 	function randomIntFromInterval(min, max) {
 		// min and max included
 		return Math.floor(Math.random() * (max - min + 1) + min);
@@ -166,12 +167,18 @@ function SortingVisualizer() {
 				}, i * ANIMATION_SPEED_MS / 8);
 			}
 		}
-	}
+  }
+  
+  const paddingSet = 300;
+
+  // <button className="generate-btn" onClick={resetArray} style={{
+  //   paddingRight:`${paddingSet}px`
+  // }}>
 
 	return (
 		<div className="array-container">
 			<div className="btn-container">
-				<button className="btn" onClick={resetArray}>
+				<button className="generate-btn" onClick={resetArray}>
 					Generate
 				</button>
 				<button className="btn" onClick={mergeSort}>
