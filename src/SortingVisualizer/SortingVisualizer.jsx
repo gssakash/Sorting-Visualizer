@@ -169,12 +169,6 @@ function SortingVisualizer() {
 		}
 	}
 
-	const paddingSet = 300;
-
-	// <button className="generate-btn" onClick={resetArray} style={{
-	//   paddingRight:`${paddingSet}px`
-	// }}>
-
 	return (
 		<div className="array-container">
 			<div className="btn-container">
